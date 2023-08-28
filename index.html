@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+        }
+        body{
+            text-align: center;
+            background-color: #C5DFF8;
+            
+
+        }
+        button{
+            width: 80px;
+            height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+<p>ทอยลูกเต๋า</p>
+<div class="imgR">
+<img id="image1" src="0.png" alt="Image 1">
+<img id="image2" src="0.png" alt="Image 2">
+<img id="image3" src="0.png" alt="Image 3">
+</div>
+
+<button id="Button">ทอย</button>
+
+<script>
+const images = [
+  "im1.png",
+  "im2.png",
+  "im3.png",
+  "im4.png",
+  "im5.png",
+  "im6.png",
+];
+
+
+document.getElementById("Button").addEventListener("click", function() {
+  document.getElementById("image1").src = getRandomImage(images);
+  document.getElementById("image2").src = getRandomImage(images);
+  document.getElementById("image3").src = getRandomImage(images);
+  document.getElementById("image4").src = getRandomImage(images);
+  document.getElementById("image5").src = getRandomImage(images);
+  document.getElementById("image6").src = getRandomImage(images);
+});
+
+function getRandomImage(imageList) {
+  const randomIndex = Math.floor(Math.random() * imageList.length);
+  return imageList[randomIndex];
+}
+</script>
+
+</body>
+</html>
